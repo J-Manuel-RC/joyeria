@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aura</title>
+  <link rel="stylesheet" href="css/styles.css">´
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <header class="cont-encabezado">
+    
+
+    <div class="buscador">
+      <label for="buscar" class="icono" tabindex="0">
+         <svg xmlns="http://www.w3.org/2000/svg" id="buscar"   viewBox="0 0 24 24" width="35" height="35">
+      <path
+        d="M23.707,22.293l-5.969-5.969a10.016,10.016,0,1,0-1.414,1.414l5.969,5.969a1,1,0,0,0,1.414-1.414ZM10,18a8,8,0,1,1,8-8A8.009,8.009,0,0,1,10,18Z" />
+    </svg>
+      </label>
+     
+      <input type="text" id="buscar" class="input-busqueda" placeholder="Buscar...">
+    </div>
+    <div class="cont-logo">
+      <img src="imagenes/logoo.png" alt="logoo">
+      <h1 class="titulo"> <span>AU</span><span class="letra-r">R</span><span>A</span> </h1>
+    </div>
+
+    <nav class="cont-iconos">
+      <ul>
+        <li>
+          <a href="#">Tienda</a>
+        </li>
+        <li>
+          <a href="#">Carrito</a>
+        </li>
+        <li>
+          <a href="#">Nosotros</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div class="cont-portada-collar">
+    <!-- <img src="./logo/portada-collar.jpg" alt="imagen de collar"> -->
+  </div>
+  <main>
+    <section class="cont-categorias">
+      <h2 class="subtitulo">Categorias</h2>
+      <div class="categorias">
+        <a href="./collares.html">
+          <article id="Ave-Fenix" class="collares categoria">
+            <h3>collares</h3>
+            <img src="./imagenes/foto-collar.jpg" alt="Foto portada de collares">
+          </article>
+        </a>
+
+        <a href="./anillos.html">
+          <article id="Flor-De-Loto" class="anillos categoria">
+            <h3>Anillos</h3>
+            <img src="./imagenes/foto-anillos.jpg" alt="foto portada de anillos">
+          </article>
+        </a>
+
+        <a href="./pulseras.html">
+          <article id="Mariposa" class="pulseras categoria">
+            <h3>Pulseras</h3>
+            <img src="./imagenes/foto-pulsera.jpg" alt="foto portada de pulseras">
+          </article>
+        </a>
+      </div>
+    </section>
+    <form class="cont-formulario">
+      <h2>Contáctanos</h2>
+      <div>
+        <label for="username">Nombre:</label>
+        <input type="text" id="username" placeholder="Juan Perez">
+      </div>
+
+      <div>
+        <label for="username">Telefono:</label>
+        <input type="number" placeholder="999-999-999">
+      </div>
+
+      <div>
+        <label for="username">Departamento:</label>
+        <select>
+          <option value="0">Seleccione una Opcion</option>
+          <option value="1">Arequipa</option>
+          <option value="2">Cuzco</option>
+          <option value="3">Lima</option>
+          <option value="4">Trujillo</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="username">Provincia:</label>
+        <select>
+          <option value="0">Seleccione una Opcion</option>
+          <option value="1">#1</option>
+          <option value="2">#2</option>
+          <option value="3">#3</option>
+          <option value="4">#4</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="username">Distrito:</label>
+        <select>
+          <option value="0">Seleccione una Opcion</option>
+          <option value="1">#1</option>
+          <option value="2">#2</option>
+          <option value="3">#3</option>
+          <option value="4">#4</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="username">Direccion:</label>
+        <input placeholder="Eje: Manzana G, Lote 18, segunda etapa">
+      </div>
+      <div>
+        <label for="username">Referencia:</label>
+        <textarea placeholder="A una cuadra de parque de Santa Rosita "></textarea>
+      </div>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; Copyright 2025-Sitio desarrollo por Aube Salazar</p>
+  </footer>
+</body>
+
+</html>

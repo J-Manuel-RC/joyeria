@@ -1,0 +1,259 @@
+/*------------------------------------- Generales --------------------------------*/
+:root {
+    --blanco: rgb(255, 255, 255);
+    --negro: rgb(0, 0, 0);
+    --gris: rgb(151, 151, 151);
+    --degradado-uno: linear-gradient(to right, rgb(255, 89, 227), rgb(176, 38, 255));
+    --degradado-dos: linear-gradient(to right, rgb(255, 253, 120), rgb(177, 255, 87));
+    --degradado-tres: linear-gradient(to bottom, rgba(7, 7, 7, 0.849), rgb(255, 0, 0));
+    --degradado-cuatro: linear-gradient(to right, rgb(19, 255, 216), rgb(255, 217, 3));
+    --dispocision: (display:flex;
+            justify-content: space-between;
+            align-items: center; )
+}
+
+section,
+form,
+div,
+h1,
+h2,
+h3,
+article,
+footer {
+    border: 1px solid var(--gris);
+
+}
+
+h1,
+h2 {
+    font-family: 'Playfair Display', serif;
+}
+
+htmml {
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+/*---------------------------- Encabezado---------------------------------- */
+.cont-encabezado {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    height: 90px;
+    background: rgba(245, 245, 220, 0.9);
+
+    /* ------------------------------------ */
+    .buscador {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #fff;
+        border-radius: 30px;
+        padding: 6px 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        width: fit-content;
+        transition: box-shadow 0.3s ease;
+    }
+
+    .buscador:hover {
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    /* 🔍 Ícono */
+    .icono {
+        cursor: pointer;
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #555;
+        transition: color 0.3s ease;
+    }
+
+    .icono:hover {
+        color: #000;
+    }
+
+    /* ✏️ Input */
+    .input-busqueda {
+        width: 0;
+        opacity: 0;
+        border: none;
+        outline: none;
+        font-size: 15px;
+        padding: 5px;
+        background: transparent;
+        transition: all 0.4s ease;
+        color: #333;
+    }
+
+    /* 💫 Cuando el input o el contenedor tienen foco */
+    .buscador:focus-within .input-busqueda {
+        width: 150px;
+        opacity: 1;
+    }
+
+    /* Efecto de resplandor */
+    .buscador:focus-within {
+        box-shadow: 0 0 0 2px #caa76a;
+        /* dorado suave */
+    }
+
+    /*------------------ Logo y Titulo de la pagina ---------------*/
+    .cont-logo {
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        height: auto;
+    }
+
+    .cont-logo img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .titulo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        min-width: 106px;
+        height: 50px;
+        color: rgb(49, 40, 40);
+    }
+
+    .titulo .letra-r {
+        font-size: 50px;
+        position: absolute;
+        left: 45px;
+        top: auto;
+    }
+
+    .titulo .letra-r:hover {
+        transform: scale(1.2);
+        transition: all 0.3s ease;
+    }
+}
+
+/*----------------- Enlaces -------------------*/
+.cont-iconos {
+    width: fit-content;
+}
+
+.cont-encabezado .cont-iconos ul {
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+
+    li {
+        width: fit-content;
+        height: 30px;
+        gap: 5px;
+
+        a {
+            text-decoration: none;
+            color: var(--gris);
+            height: 30px;
+            font-size: 20px;
+            margin-top: 8px;
+        }
+
+        a:hover {
+            transform: scale(1.2);
+            transition: all 0.3s ease;
+        }
+    }
+}
+
+/*------------------------------- Portada -------------------------------------*/
+.cont-portada-collar {
+    background: url("../imagenes/portada-collar.jpg") no-repeat center center/ cover;
+    width: 100%;
+    aspect-ratio: 3 / 1;  /* o 16/9, según el tipo de imagen */
+}
+
+/* -----------------------------Categorias----------------------------------- */
+.cont-categorias {
+    color: var(--gris);
+}
+
+.cont-categorias>.subtitulo {
+    display: flex;
+    justify-content: center;
+
+}
+
+.categorias {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+    gap: 15px;
+    margin: 5px auto;
+
+    .categoria {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    h3 {
+        position: absolute;
+        bottom: 15px;
+        text-transform: uppercase;
+        color: var(--blanco);
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        border-radius: 8px;
+    }
+}
+
+/* Pseudo-elemento para opacar */
+.categorias .categoria::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0);
+    /* transparente por defecto */
+    transition: background 0.3s ease;
+}
+
+/* Cuando el contenedor tiene hover, todos se oscurecen */
+.categorias:hover .categoria::after {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* El que está bajo el cursor no se oscurece */
+.categorias .categoria:hover::after {
+    background: rgba(0, 0, 0, 0);
+    cursor: pointer;
+}
+
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    background: var(--gris);
+    color: var(--blanco);
+}
