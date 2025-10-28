@@ -3,38 +3,58 @@
     --blanco: rgb(255, 255, 255);
     --negro: rgb(0, 0, 0);
     --gris: rgb(151, 151, 151);
-    --degradado-uno: linear-gradient(to right, rgb(255, 89, 227), rgb(176, 38, 255));
-    --degradado-dos: linear-gradient(to right, rgb(255, 253, 120), rgb(177, 255, 87));
-    --degradado-tres: linear-gradient(to bottom, rgba(7, 7, 7, 0.849), rgb(255, 0, 0));
-    --degradado-cuatro: linear-gradient(to right, rgb(19, 255, 216), rgb(255, 217, 3));
-    --dispocision: (display:flex;
-            justify-content: space-between;
-            align-items: center; )
+    --degradado-uno: linear-gradient(
+        to right,
+        rgb(255, 89, 227),
+        rgb(176, 38, 255)
+    );
+    --degradado-dos: linear-gradient(
+        to right,
+        rgb(255, 253, 120),
+        rgb(177, 255, 87)
+    );
+    --degradado-tres: linear-gradient(
+        to bottom,
+        rgba(7, 7, 7, 0.849),
+        rgb(255, 0, 0)
+    );
+    --degradado-cuatro: linear-gradient(
+        to right,
+        rgb(19, 255, 216),
+        rgb(255, 217, 3)
+    );
+    --dispocision: (
+        display: flex; justify-content: space-between; align-items: center;
+    );
 }
-
+.display {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 section,
 form,
-div,
+/* div, */
 h1,
 h2,
 h3,
 article,
 footer {
     border: 1px solid var(--gris);
-
 }
 
 h1,
 h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: "Playfair Display", serif;
 }
 
 htmml {
     scroll-behavior: smooth;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body {
+    /* position: relative; */
     width: 100%;
     margin: 0 auto;
 }
@@ -53,105 +73,105 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 0 40px;
-    height: 90px;
+    height: 85px;
     background: rgba(245, 245, 220, 0.9);
 
     /* ------------------------------------ */
-    .buscador {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        background-color: #fff;
-        border-radius: 30px;
-        padding: 6px 10px;
-        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-        width: fit-content;
-        transition: box-shadow 0.3s ease;
-    }
-
-    .buscador:hover {
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
-    }
-
-    /* 🔍 Ícono */
-    .icono {
-        cursor: pointer;
-        width: 22px;
-        height: 22px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #555;
-        transition: color 0.3s ease;
-    }
-
-    .icono:hover {
-        color: #000;
-    }
-
-    /* ✏️ Input */
-    .input-busqueda {
-        width: 0;
-        opacity: 0;
-        border: none;
-        outline: none;
-        font-size: 15px;
-        padding: 5px;
-        background: transparent;
-        transition: all 0.4s ease;
-        color: #333;
-    }
-
-    /* 💫 Cuando el input o el contenedor tienen foco */
-    .buscador:focus-within .input-busqueda {
-        width: 150px;
-        opacity: 1;
-    }
-
-    /* Efecto de resplandor */
-    .buscador:focus-within {
-        box-shadow: 0 0 0 2px #caa76a;
-        /* dorado suave */
-    }
-
-    /*------------------ Logo y Titulo de la pagina ---------------*/
-    .cont-logo {
-        display: flex;
-        align-items: center;
-        width: fit-content;
-        height: auto;
-    }
-
-    .cont-logo img {
-        width: 60px;
-        height: 60px;
-    }
-
-    .titulo {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-        min-width: 106px;
-        height: 50px;
-        color: rgb(49, 40, 40);
-    }
-
-    .titulo .letra-r {
-        font-size: 50px;
-        position: absolute;
-        left: 45px;
-        top: auto;
-    }
-
-    .titulo .letra-r:hover {
-        transform: scale(1.2);
-        transition: all 0.3s ease;
-    }
+}
+.cont-encabezado .buscador {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fff;
+    border-radius: 30px;
+    padding: 6px 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    width: fit-content;
+    height: 100;
+    transition: box-shadow 0.3s ease;
 }
 
+.cont-encabezado .buscador:hover {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* 🔍 Ícono */
+.cont-encabezado .icono {
+    cursor: pointer;
+    width: 22px;
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    transition: color 0.3s ease;
+}
+
+.cont-encabezado .icono:hover {
+    color: #000;
+}
+
+/* ✏️ Input */
+.cont-encabezado .input-busqueda {
+    width: 0;
+    opacity: 0;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 5px;
+    background: transparent;
+    transition: all 0.4s ease;
+    color: #333;
+}
+
+/* 💫 Cuando el input o el contenedor tienen foco */
+.cont-encabezado .buscador:focus-within .input-busqueda {
+    width: 150px;
+    opacity: 1;
+}
+
+/* Efecto de resplandor */
+.cont-encabezado .buscador:focus-within {
+    box-shadow: 0 0 0 2px #caa76a;
+    /* dorado suave */
+}
+
+/*------------------ Logo y Titulo de la pagina ---------------*/
+.cont-encabezado .cont-logo {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    height: 100%;
+}
+
+.cont-encabezado .cont-logo img {
+    width: 60px;
+    height: 60px;
+}
+
+.cont-encabezado .titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    min-width: 106px;
+    height: 50px;
+    color: rgb(49, 40, 40);
+}
+
+.cont-encabezado .titulo .letra-r {
+    font-size: 50px;
+    position: absolute;
+    left: 45px;
+    top: auto;
+}
+
+.cont-encabezado .titulo .letra-r:hover {
+    transform: scale(1.2);
+    transition: all 0.3s ease;
+}
 /*----------------- Enlaces -------------------*/
-.cont-iconos {
+.cont-encabezado .cont-iconos {
     width: fit-content;
 }
 
@@ -185,9 +205,10 @@ main {
 
 /*------------------------------- Portada -------------------------------------*/
 .cont-portada-collar {
-    background: url("../imagenes/portada-collar.jpg") no-repeat center center/ cover;
+    background: url("../imagenes/portada-collar.jpg") no-repeat center center/
+        cover;
     width: 100%;
-    aspect-ratio: 3 / 1;  /* o 16/9, según el tipo de imagen */
+    aspect-ratio: 3 / 1; /* o 16/9, según el tipo de imagen */
 }
 
 /* -----------------------------Categorias----------------------------------- */
@@ -195,39 +216,36 @@ main {
     color: var(--gris);
 }
 
-.cont-categorias>.subtitulo {
+.cont-categorias > .subtitulo {
     display: flex;
     justify-content: center;
-
 }
 
 .categorias {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 400px), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(400px, 100%), 1fr));
     gap: 15px;
     margin: 5px auto;
-
-    .categoria {
-        display: flex;
-        position: relative;
-        justify-content: center;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    }
-
-    h3 {
-        position: absolute;
-        bottom: 15px;
-        text-transform: uppercase;
-        color: var(--blanco);
-    }
-
-    img {
-        height: 100%;
-        width: 100%;
-        border-radius: 8px;
-    }
+}
+.categorias .categoria {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
+.categorias h3 {
+    position: absolute;
+    bottom: 15px;
+    text-transform: uppercase;
+    color: var(--blanco);
+}
+
+.categorias img {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px;
+}
 /* Pseudo-elemento para opacar */
 .categorias .categoria::after {
     content: "";
@@ -249,6 +267,47 @@ main {
     cursor: pointer;
 }
 
+/* Iconos flotantes */
+.cont-whatsapp {
+    position: fixed;
+    z-index: 10;
+    bottom: 30px;
+    right: 30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    /* border: 1px solid green; */
+}
+.cont-whatsapp .whatsapp {
+    height: 100%;
+    width: 100%;
+    fill: #00e200fe;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.cont-whatsapp .whatsapp:hover,
+.cont-whatsapp .whatsapp:active {
+    animation: bounce 0.6s ease;
+}
+
+/* Efecto rebote */
+@keyframes bounce {
+    0%,
+    100% {
+        transform: scale(1);
+    }
+    30% {
+        transform: scale(1.3);
+    }
+    50% {
+        transform: scale(0.9);
+    }
+    70% {
+        transform: scale(1.1);
+    }
+    90% {
+        transform: scale(0.95);
+    }
+}
 
 /* Footer */
 footer {
@@ -256,4 +315,5 @@ footer {
     justify-content: center;
     background: var(--gris);
     color: var(--blanco);
+    font-size: 12px;
 }
